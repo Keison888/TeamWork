@@ -1,6 +1,3 @@
 # simple code here
-
-print('hey')
-print('hi?')
-
-# comment
+x = 1
+print(x)
