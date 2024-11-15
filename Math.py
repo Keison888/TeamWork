@@ -1,6 +1,6 @@
 # simple code here
 
 print('hey')
-print('what am I doing?')
+print('hi?')
 
 # comment
