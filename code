@@ -41,12 +41,20 @@ while info_to_display not in columns:
 print(f"\nShowing {info_to_display} for items in '{selected_ctg}' category:")
 print(filtered_items[['Item', info_to_display]])
 
-plt.figure(figsize=(10, 6))
-plt.bar(filtered_items['Item'], filtered_items[info_to_display], color='orange')
-plt.title(f"{info_to_display} of Items in {selected_ctg}")
-plt.xlabel("Items")
-plt.ylabel(info_to_display)
-plt.xticks(rotation=90, fontsize=4)
-plt.tight_layout()
-plt.show()
-print("Never Gonna Give You Up")
+user_choice = spell(input("\nWhat type of graph would you like the result in?\n"
+                    "\n- bar"
+                    "\n- scatter"
+                    "\n- "))
+
+if user_choice == "bar":
+    plt.figure(figsize=(10, 6))
+    plt.bar(filtered_items['Item'], filtered_items[info_to_display], color='orange')
+    plt.title(f"{info_to_display} of Items in {selected_ctg}")
+    plt.xlabel("Items")
+    plt.ylabel(info_to_display)
+    plt.xticks(rotation=90, fontsize=4)
+    plt.tight_layout()
+    plt.show()
+    print("Never Gonna Give You Up")
+else:
+    print("finish code")
